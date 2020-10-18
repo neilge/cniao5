@@ -11,8 +11,6 @@ import java.util.List;
  */
 public interface AccountDao {
 
-    Account get(@Param("id") long id);
-
     /**
      * 查询所有用户.
      */
@@ -24,9 +22,9 @@ public interface AccountDao {
     Account findById(long id);
 
     /**
-     * 根据mobi查询用户
+     * 根据email查询用户
      */
-    Account findByMobi(String mobi);
+    Account findByMobi(String email);
 
     /**
      * 保存用户
@@ -37,9 +35,4 @@ public interface AccountDao {
      * 更新用户
      */
     void updateAccount(Account account);
-
-    /**
-     * 删除用户
-     */
-    void deleteAccount(long id);
 }
